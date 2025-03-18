@@ -30,20 +30,6 @@ header img {
     margin: 0 0 1rem 0;
 }
 
-header a.skip-link {
-    color: var(--white);
-    background: var(--umich-blue);
-    border: 2px solid var(--white);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
 
 
 nav ul {
@@ -65,6 +51,29 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
+nav ul li a.active {
+    color: var(--white);
+    background-color: var(--umich-blue);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: -999px;
+    background: #004165;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 100;
+    text-align: center;
+    transition: top 0.3s ease-in-out; /* Smooth appearance */
+}
+
+.skip-link:focus {
+    left: 0;
+    top: 0;
+}
 
 main {
     display: block;
