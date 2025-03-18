@@ -32,16 +32,17 @@ header img {
 }
 
 header a.skip-link {
-    color: var(--umich-maize);
+    color: var(--white);
+    background: var(--umich-blue);
+    border: 2px solid var(--white);
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 1000; 
+    z-index: 1000;
     padding: 8px 12px;
-    background-color: var(--umich-blue);
     border-radius: 5px;
 }
 
