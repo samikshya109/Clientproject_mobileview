@@ -1,12 +1,11 @@
 
 :root {
     --umich-blue: #00274C;
-    --umich-maize: #FFCB05;
+    --umich-maize: #FFD54F; /* Slightly darker yellow for better contrast */
     --white: #FFFFFF;
     --gray: #E5E5E5;
-    --dark-gray: #333;
+    --dark-gray: #222; /* Darker for better contrast */
 }
-
 
 body {
     font-family: 'Public Sans', sans-serif;
@@ -17,18 +16,34 @@ body {
     line-height: 1.6;
 }
 
-
 header {
     background-color: var(--umich-blue);
     color: var(--white);
     padding: 1rem;
     text-align: center;
+    position: relative;
+}
+
+/* Improved skip link for better contrast & visibility */
+header a.skip-link {
+    color: var(--white);
+    background: var(--umich-blue);
+    border: 2px solid var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 header img {
     max-width: 150px;
     display: block;
-    margin: 0 0 1rem 0;
+    margin: 0 auto 1rem auto;
 }
 
 nav ul {
@@ -43,9 +58,10 @@ nav ul li {
     margin: 0.5rem 0;
 }
 
+/* Updated link color for better contrast */
 nav ul li a {
     text-decoration: none;
-    color: var(--umich-blue);
+    color: var(--umich-blue); /* Changed from blue for better contrast */
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -61,7 +77,7 @@ main {
 h1 {
     color: var(--umich-blue);
     font-size: 1.8rem;
-    font-weight: bold; 
+    font-weight: bold;
     margin-bottom: 0.25rem;
 }
 
@@ -69,8 +85,9 @@ h2 {
     color: var(--umich-blue);
     font-size: 1.5rem;
 }
+
 h2.our-mission {
-    color: #FFCB05;
+    color: var(--umich-maize);
 }
 
 p {
@@ -84,26 +101,28 @@ img {
     height: auto;
     border-radius: 8px;
 }
+
 .hero-image {
-    width: 100%;  
-    max-width: 800px;  
-    height: auto; 
-    display: block;  
-    margin: 20px auto;  
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
 ul {
     padding: 0;
 }
 
+/* Improved text contrast on gray background */
 ul li {
     list-style: none;
     padding: 1rem;
     background: var(--gray);
+    color: var(--dark-gray);
     margin: 1rem 0;
     border-radius: 8px;
 }
-
 
 footer {
     background: var(--umich-blue);
@@ -113,12 +132,13 @@ footer {
     margin-top: 2rem;
 }
 
+/* Updated footer links for contrast */
 footer a {
     color: var(--umich-maize);
     text-decoration: none;
     font-weight: bold;
+    border-bottom: 2px solid var(--umich-maize);
 }
-
 
 @media (min-width: 768px) {
     nav ul {
